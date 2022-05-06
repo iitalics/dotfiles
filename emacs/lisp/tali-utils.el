@@ -10,7 +10,6 @@
 (defun tali-get-font-foundry (family)
   (let ((foundry nil) (family-seen nil))
     (dolist (ln (process-lines "fc-list" family "-f" "=%{family}\\n:%{foundry}\\n"))
-      (message ln)
       (if family-seen (setq foundry (substring ln 1)))
       (setq family-seen (equal ln (format "=%s" family))))
     (unless foundry (error "couldn't find font %s" family))
