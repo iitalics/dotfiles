@@ -136,3 +136,10 @@
   :mode ("\\.js[mx]?\\'" . javascript-mode)
   :mode ("\\.json\\'" . javascript-mode)
   :config (setq js-indent-level 4))
+
+(use-package lsp-mode
+  :defer t)
+
+(use-package rustic
+  :defer t
+  :mode ("\\.rs\\'" . rustic-mode))
