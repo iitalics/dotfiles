@@ -22,6 +22,7 @@
         kept-new-versions 3
         kept-old-versions 2
         version-control t
+        vc-follow-symlinks t
         shell-file-name "/bin/bash")
 
   (setq-default indent-tabs-mode nil
@@ -115,6 +116,9 @@
 
 (use-package rainbow-delimiters)
 (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
+
+(use-package dr-racket-like-unicode
+  :bind ("C-c C-\\" . dr-racket-like-unicode-char))
 
 (use-package magit
   :bind ("M-g M-s" . magit-status)
