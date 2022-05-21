@@ -143,3 +143,8 @@
 (use-package rustic
   :defer t
   :mode ("\\.rs\\'" . rustic-mode))
+
+(use-package racket-mode
+  :mode ("\\.rktl\\'" . racket-mode)
+  :mode ("\\.rktd\\'" . racket-mode)
+  :mode ("\\.rkt\\'" . racket-mode))
