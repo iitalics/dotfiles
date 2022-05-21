@@ -10,11 +10,13 @@
 (tali-change-font "Source Code Pro" 'normal 131)
 (tali-change-theme 'doom-moonlight)
 
+(use-package nlinum)
+
 (progn
   (menu-bar-mode -1)
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
-  (global-linum-mode t)
+  (global-nlinum-mode t)
 
   (setq backup-by-copying t
         backup-directory-alist '(("." . "~/.emacs.d/backups"))
