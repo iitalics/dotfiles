@@ -4,6 +4,7 @@
 
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 (require 'tali-utils)
+(load "~/.emacs.d/custom.el")
 
 (use-package doom-themes)
 
@@ -17,22 +18,6 @@
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
   (global-nlinum-mode t)
-
-  (setq backup-by-copying t
-        backup-directory-alist '(("." . "~/.emacs.d/backups"))
-        delete-old-versions t
-        kept-new-versions 3
-        kept-old-versions 2
-        version-control t
-        vc-follow-symlinks t
-        shell-file-name "/bin/bash")
-
-  (setq-default indent-tabs-mode nil
-                column-number-mode t
-	        fill-column 90
-                ring-bell-function #'tali-no-op
-                blink-cursor-blinks 3
-                initial-major-mode 'text-mode)
 
   (global-set-key (kbd "C-M-=") #'mark-sexp)
   (global-set-key (kbd "M-[") #'backward-paragraph)
