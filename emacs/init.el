@@ -8,8 +8,8 @@
 
 (use-package doom-themes)
 
-(tali-change-font "Source Code Pro" 'normal 131)
-(tali-change-theme 'doom-moonlight)
+;;(tali-change-font "Source Code Pro" 'normal 131)
+(tali-change-theme 'doom-one)
 
 (use-package nlinum)
 
@@ -57,14 +57,6 @@
 
 (use-package lsp-mode
   :after flymake
-  :custom-face (lsp-headerline-breadcrumb-separator-face
-                ((t (:inherit mode-line-face :weight thin))))
-  :custom-face (lsp-headerline-breadcrumb-path-face
-                ((t (:inherit mode-line-face))))
-  :custom-face (lsp-headerline-breadcrumb-path-error-face
-                ((t (:inherit lsp-headerline-breadcrumb-path-face))))
-  :custom-face (lsp-headerline-breadcrumb-symbols-face
-                ((t (:inherit mode-line-face :weight bold))))
   :config
   (setq lsp-diagnostics-provider :flymake
         lsp-enable-indentation t
@@ -78,9 +70,6 @@
 (use-package ivy
   :demand
   :diminish
-  :custom-face (ivy-minibuffer-match-face-2 ((t (:weight normal))))
-  :custom-face (ivy-minibuffer-match-face-3 ((t (:weight normal))))
-  :custom-face (ivy-minibuffer-match-face-4 ((t (:weight normal))))
   :bind (:map ivy-minibuffer-map
 	      ("RET" . ivy-alt-done)
 	      ("<C-return>" . ivy-immediate-done)

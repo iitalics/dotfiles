@@ -7,7 +7,7 @@
     (disable-theme en))
   (load-theme th t))
 
-(defun tali-get-font-foundry (family)
+(defun tali--get-font-foundry (family)
   (let ((foundry nil) (family-seen nil))
     (dolist (ln (process-lines "fc-list" family "-f" "=%{family}\\n:%{foundry}\\n"))
       (if family-seen (setq foundry (substring ln 1)))
@@ -18,7 +18,7 @@
 (defun tali-change-font (fam wgt siz)
   (custom-set-faces
    (let ((face (list :family fam
-                     :foundry (tali-get-font-foundry fam)
+                     :foundry (tali--get-font-foundry fam)
                      :height siz
                      :weight wgt)))
      `(default ((t ,face))))))
