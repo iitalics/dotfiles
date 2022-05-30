@@ -12,5 +12,6 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
-(setq straight-use-package-by-default t)
-(setq use-package-verbose t)
+(setq straight-use-package-by-default t
+      use-package-verbose t
+      use-package-compute-statistics t)

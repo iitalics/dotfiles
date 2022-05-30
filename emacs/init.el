@@ -38,6 +38,7 @@
 (diminish 'eldoc-mode)
 
 (use-package company
+  :demand
   :diminish
   :bind (("<C-tab>" . company-complete)
          :map company-active-map
@@ -121,14 +122,15 @@
 (use-package js
   :straight nil
   :mode ("\\.js[mx]?\\'" . javascript-mode)
-  :mode ("\\.json\\'" . javascript-mode)
+  :mode ("\\.json\\'" . tali-json-mode)
   :config (setq js-indent-level 4))
 
-(use-package lsp-mode
-  :defer t)
+(defun tali-json-mode ()
+  (interactive)
+  (javascript-mode)
+  (setq-local js-indent-level 2))
 
 (use-package rustic
-  :defer t
   :mode ("\\.rs\\'" . rustic-mode))
 
 (use-package racket-mode
