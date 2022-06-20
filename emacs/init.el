@@ -98,6 +98,8 @@
 (use-package rainbow-delimiters)
 (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
 
+(use-package rainbow-mode)
+
 (use-package dr-racket-like-unicode
   :bind ("C-c C-\\" . dr-racket-like-unicode-char))
 
