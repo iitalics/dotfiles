@@ -49,7 +49,6 @@
          ("M-n" . company-select-next-or-abort)
          ("M-p" . company-select-previous-or-abort))
   :config
-  (setq company-idle-delay nil)
   (global-company-mode t))
 
 (use-package flymake

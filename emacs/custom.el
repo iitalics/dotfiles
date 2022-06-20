@@ -8,6 +8,8 @@
  '(backup-directory-alist '(("." . "~/.emacs.d/backups")))
  '(blink-cursor-blinks 3)
  '(column-number-mode t)
+ '(company-idle-delay 0.5)
+ '(company-insertion-on-trigger nil)
  '(custom-file "~/.emacs.d/custom.el")
  '(delete-old-versions t)
  '(fill-column 90)
