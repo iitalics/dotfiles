@@ -36,6 +36,10 @@
 (use-package diminish :demand t)
 (use-package eldoc :straight nil)
 (diminish 'eldoc-mode)
+(diminish 'smerge-mode)
+
+(use-package autorevert
+  :diminish auto-revert-mode)
 
 (use-package company
   :demand
@@ -65,7 +69,8 @@
         lsp-enable-symbol-highlighting nil
         lsp-modeline-diagnostics-enable nil
         lsp-signature-auto-activate nil
-        lsp-signature-render-documentation nil))
+        lsp-signature-render-documentation nil)
+  (diminish 'lsp-lens-mode))
 
 (use-package ivy
   :demand
