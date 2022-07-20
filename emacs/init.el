@@ -2,6 +2,12 @@
 ;; tali emacs
 ;; =======================================================================================
 
+(use-package exec-path-from-shell)
+(setq exec-path-from-shell-variables
+      '("MANPATH" "PATH" "PKG_CONFIG_PATH"
+        "CAML_LD_LIBRARY_PATH" "OCAML_TOPLEVEL_PATH" "OPAM_SWITCH_PREFIX"))
+(exec-path-from-shell-initialize)
+
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 (let ((opam-share (file-name-as-directory (car (process-lines "opam" "var" "share")))))
   (add-to-list 'load-path (concat opam-share "emacs/site-lisp")))
