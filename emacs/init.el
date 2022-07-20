@@ -3,6 +3,9 @@
 ;; =======================================================================================
 
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
+(let ((opam-share (file-name-as-directory (car (process-lines "opam" "var" "share")))))
+  (add-to-list 'load-path (concat opam-share "emacs/site-lisp")))
+
 (require 'tali-utils)
 (load "~/.emacs.d/custom.el")
 
@@ -132,3 +135,25 @@
   :mode ("\\.rktl\\'" . racket-mode)
   :mode ("\\.rktd\\'" . racket-mode)
   :mode ("\\.rkt\\'" . racket-mode))
+
+(use-package tuareg
+  ;; FIXME: make this conditional if opam/tuareg/merlin is not found on system
+  :straight nil
+  :mode ("\\.ml[ip]?\\'" . tuareg-mode)
+  :mode ("\\.eliomi?\\'" . tuareg-mode))
+
+(use-package tuareg-menhir
+  :straight nil
+  :mode ("\\.mly\\'" . tuareg-menhir-mode))
+
+(use-package tuareg-opam
+  :straight nil
+  :mode ("[./]opam_?\\'" . tuareg-opam-mode))
+
+(use-package dune
+  :straight nil
+  :mode ("\\(?:\\`\\|/\\)dune\\(?:\\.inc\\|\\-project\\)?\\'" . dune-mode))
+
+(use-package merlin
+  :straight nil
+  :hook (tuareg-mode . merlin-mode))

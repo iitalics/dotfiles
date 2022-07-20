@@ -34,4 +34,6 @@
  '(lsp-headerline-breadcrumb-path-error-face ((t (:inherit lsp-headerline-breadcrumb-path-face))))
  '(lsp-headerline-breadcrumb-path-face ((t (:inherit mode-line-face))))
  '(lsp-headerline-breadcrumb-separator-face ((t (:inherit mode-line-face :weight thin))))
- '(lsp-headerline-breadcrumb-symbols-face ((t (:inherit mode-line-face :weight bold)))))
+ '(tuareg-font-lock-error-face ((t (:underline (:color "firebrick" :style wave)))))
+ '(tuareg-font-lock-governing-face ((t (:inherit font-lock-keyword-face))))
+ '(tuareg-font-lock-operator-face ((t nil))))
