@@ -16,9 +16,9 @@
 (load "~/.emacs.d/custom.el")
 
 (use-package doom-themes)
+(tali-change-theme 'doom-horizon)
 
-;;(tali-change-font "Source Code Pro" 'normal 131)
-(tali-change-theme 'doom-one)
+(set-fontset-font t 'symbol (font-spec :family "Segoe UI Emoji") nil 'prepend)
 
 (use-package nlinum)
 
