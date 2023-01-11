@@ -140,7 +140,8 @@
 (use-package racket-mode
   :mode ("\\.rktl\\'" . racket-mode)
   :mode ("\\.rktd\\'" . racket-mode)
-  :mode ("\\.rkt\\'" . racket-mode))
+  :mode ("\\.rkt\\'" . racket-mode)
+  :hook (racket-mode . rainbow-delimiters-mode))
 
 (use-package tuareg
   ;; FIXME: make this conditional if opam/tuareg/merlin is not found on system
@@ -163,3 +164,6 @@
 (use-package merlin
   :straight nil
   :hook (tuareg-mode . merlin-mode))
+
+(use-package parinfer
+  )
