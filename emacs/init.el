@@ -143,6 +143,12 @@
   :mode ("\\.rkt\\'" . racket-mode)
   :hook (racket-mode . rainbow-delimiters-mode))
 
+(use-package glsl-mode
+  :mode ("\\.glsl\\'" . glsl-mode)
+  :mode ("\\.geom\\'" . glsl-mode)
+  :mode ("\\.frag\\'" . glsl-mode)
+  :mode ("\\.vert\\'" . glsl-mode))
+
 (use-package tuareg
   ;; FIXME: make this conditional if opam/tuareg/merlin is not found on system
   :straight nil
