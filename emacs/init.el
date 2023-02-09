@@ -37,6 +37,7 @@
   (global-set-key (kbd "M-s r") #'replace-regexp)
   (global-set-key (kbd "M-s s") #'sort-lines)
   (global-set-key (kbd "<f2> <f2>") #'compile)
+  (global-set-key (kbd "<f2> <f3>") #'recompile)
   (global-set-key (kbd "M-<f2>") #'recompile)
                                         ;(global-set-key (kbd "M-s n") #'-next-error)
   (global-set-key (kbd "M-s M-s") #'shell)

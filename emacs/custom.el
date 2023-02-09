@@ -18,6 +18,7 @@
  '(kept-new-versions 3)
  '(kept-old-versions 2)
  '(ring-bell-function 'ignore)
+ '(rustic-cargo-check-arguments "--all-features")
  '(shell-file-name "/bin/bash")
  '(vc-follow-symlinks t)
  '(version-control t))
