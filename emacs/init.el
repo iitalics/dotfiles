@@ -111,7 +111,9 @@
 (use-package rainbow-mode)
 
 (use-package dr-racket-like-unicode
-  :bind ("C-c C-\\" . dr-racket-like-unicode-char))
+  :bind ("C-c C-\\" . dr-racket-like-unicode-char)
+  :config (dolist (e '(("\\ldots" . "\u2026")))
+           (add-to-list 'dr-racket-like-unicode-table e)))
 
 (use-package magit
   :bind ("M-g M-s" . magit-status)
