@@ -51,6 +51,10 @@
 (use-package autorevert
   :diminish auto-revert-mode)
 
+(use-package compile
+  :straight nil
+  :hook (compilation-filter . ansi-color-compilation-filter))
+
 (use-package company
   :demand
   :diminish
