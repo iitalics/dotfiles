@@ -10,6 +10,7 @@
  '(column-number-mode t)
  '(company-idle-delay 0.5)
  '(company-insertion-on-trigger nil)
+ '(compilation-max-output-line-length nil)
  '(custom-file "~/.emacs.d/custom.el")
  '(delete-old-versions t)
  '(fill-column 90)
@@ -19,7 +20,9 @@
  '(kept-old-versions 2)
  '(ring-bell-function 'ignore)
  '(rustic-cargo-check-arguments "--all-features")
+ '(rustic-default-test-arguments "--tests --all-features")
  '(shell-file-name "/bin/bash")
+ '(tuareg-match-clause-indent 0)
  '(vc-follow-symlinks t)
  '(version-control t))
 
