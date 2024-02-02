@@ -172,6 +172,9 @@
   :straight nil
   :mode ("[./]opam_?\\'" . tuareg-opam-mode))
 
+(use-package ocp-indent
+  :hook (tuareg-mode . ocp-setup-indent))
+
 (use-package dune
   :straight nil
   :mode ("\\(?:\\`\\|/\\)dune\\(?:\\.inc\\|\\-project\\)?\\'" . dune-mode))
