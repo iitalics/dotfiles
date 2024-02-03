@@ -20,13 +20,12 @@
 
 (set-fontset-font t 'symbol (font-spec :family "Segoe UI Emoji") nil 'prepend)
 
-(use-package nlinum)
 
 (progn
   (menu-bar-mode -1)
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
-  (global-nlinum-mode t)
+  (display-line-numbers-mode t)
 
   (global-set-key (kbd "C-M-=") #'mark-sexp)
   (global-set-key (kbd "M-[") #'backward-paragraph)
