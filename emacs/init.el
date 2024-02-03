@@ -12,6 +12,7 @@
 (let ((opam-share (file-name-as-directory (car (process-lines "opam" "var" "share")))))
   (add-to-list 'load-path (concat opam-share "emacs/site-lisp")))
 
+(require 'cl-lib)
 (require 'tali-utils)
 (load "~/.emacs.d/custom.el")
 
@@ -20,12 +21,12 @@
 
 (set-fontset-font t 'symbol (font-spec :family "Segoe UI Emoji") nil 'prepend)
 
-
 (progn
   (menu-bar-mode -1)
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
-  (display-line-numbers-mode t)
+  (global-display-line-numbers-mode 1)
+  (setq inhibit-startup-screen t)
 
   (global-set-key (kbd "C-M-=") #'mark-sexp)
   (global-set-key (kbd "M-[") #'backward-paragraph)
