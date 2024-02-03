@@ -14,6 +14,7 @@
  '(custom-file "~/.emacs.d/custom.el")
  '(delete-old-versions t)
  '(fill-column 90)
+ '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
  '(initial-major-mode 'text-mode)
  '(kept-new-versions 3)
