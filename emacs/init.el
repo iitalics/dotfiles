@@ -152,6 +152,7 @@
   :mode ("\\.rktl\\'" . racket-mode)
   :mode ("\\.rktd\\'" . racket-mode)
   :mode ("\\.rkt\\'" . racket-mode)
+  :bind (:map racket-mode-map ("C-c C-r" . racket-run))
   :hook (racket-mode . rainbow-delimiters-mode))
 
 (use-package glsl-mode
