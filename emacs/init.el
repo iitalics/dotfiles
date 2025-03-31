@@ -17,7 +17,8 @@
 (load "~/.emacs.d/custom.el")
 
 (use-package doom-themes)
-(tali-change-theme 'doom-city-lights)
+;(tali-change-theme 'doom-city-lights)
+(tali-change-theme 'doom-dark+)
 
 (set-fontset-font t 'symbol (font-spec :family "Segoe UI Emoji") nil 'prepend)
 
