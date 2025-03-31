@@ -19,6 +19,8 @@
  '(initial-major-mode 'text-mode)
  '(kept-new-versions 3)
  '(kept-old-versions 2)
+ '(lsp-enable-on-type-formatting nil)
+ '(lsp-restart 'ignore)
  '(ring-bell-function 'ignore)
  '(rustic-cargo-check-arguments "--all-features")
  '(rustic-default-test-arguments "--tests --all-features")
