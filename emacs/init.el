@@ -190,3 +190,6 @@
 
 (use-package sass-mode
   :mode ("\\.sass\\'" . sass-mode))
+
+(use-package julia-mode
+  :mode ("\\.jl\\'" . julia-mode))
