@@ -128,10 +128,10 @@
   :bind (:map magit-revision-mode-map ("C-M-p" . diff-hunk-prev))
   :bind (:map magit-revision-mode-map ("C-M-n" . diff-hunk-next)))
 
-(use-package agda2-mode
-  :straight nil
-  :load-path "~/Code/agda/src/data/emacs-mode"
-  :mode ("\\.l?agda\\'" . agda2-mode))
+;; (use-package agda2-mode
+;;   :straight nil
+;;   :mode ("\\.l?agda\\'" . agda2-mode)
+;;   )
 
 (use-package js
   :straight nil
