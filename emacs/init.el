@@ -136,6 +136,7 @@
 (use-package js
   :straight nil
   :mode ("\\.js[mx]?\\'" . javascript-mode)
+  :mode ("\\.ts\\'" . javascript-mode)
   :mode ("\\.json\\'" . tali-json-mode)
   :config (setq js-indent-level 4))
 
