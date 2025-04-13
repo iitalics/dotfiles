@@ -153,7 +153,9 @@
   :mode ("\\.rktd\\'" . racket-mode)
   :mode ("\\.rkt\\'" . racket-mode)
   :bind (:map racket-mode-map ("C-c C-r" . racket-run))
-  :hook (racket-mode . rainbow-delimiters-mode))
+  :bind (:map racket-repl-mode-map ("C-c M-o" . racket-repl-clear-leaving-last-prompt))
+  :hook (racket-mode . rainbow-delimiters-mode)
+  :config (load "rhombus"))
 
 (use-package glsl-mode
   :mode ("\\.glsl\\'" . glsl-mode)
