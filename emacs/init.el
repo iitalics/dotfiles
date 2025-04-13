@@ -188,8 +188,8 @@
   :straight nil
   :hook (tuareg-mode . merlin-mode))
 
-(use-package parinfer
-  )
+;; (use-package parinfer
+;;   )
 
 (use-package sass-mode
   :mode ("\\.sass\\'" . sass-mode))
