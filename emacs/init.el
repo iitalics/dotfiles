@@ -117,10 +117,7 @@
 
 (use-package dr-racket-like-unicode
   :bind ("C-c C-\\" . dr-racket-like-unicode-char)
-  :config (dolist (e '(("\\ldots" . "\u2026")
-                       ("\\bbox" . "\u2610")
-                       ("\\cbox" . "\u2611")))
-           (add-to-list 'dr-racket-like-unicode-table e)))
+  :config (load "more-dr-racket-unicode.el"))
 
 (use-package magit
   :bind ("M-g M-s" . magit-status)
