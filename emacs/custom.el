@@ -24,6 +24,10 @@
  '(ring-bell-function 'ignore)
  '(rustic-cargo-check-arguments "--all-features")
  '(rustic-default-test-arguments "--tests --all-features")
+ '(safe-local-variable-directories '("/home/iitalics/code/"))
+ '(safe-local-variable-values
+   '((compilation-error-regexp-alist)
+     (rustic-run-arguments . "--features bevy/dynamic_linking")))
  '(shell-file-name "/bin/bash")
  '(tali-theme-flavor 'dark)
  '(tuareg-match-clause-indent 0)
