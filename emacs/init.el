@@ -174,7 +174,9 @@
   (add-hook 'js-jsx-mode-hook #'tali-js-jsx-mode-hook))
 
 (use-package rustic
-  :mode ("\\.rs\\'" . rustic-mode))
+  :mode ("\\.rs\\'" . rustic-mode)
+  :config
+  (setq rustic-default-test-arguments "--tests"))
 
 (use-package racket-mode
   :mode ("\\.rktl\\'" . racket-mode)
