@@ -95,16 +95,18 @@
 
 (use-package lsp-mode
   :after flymake
+  :commands (lsp-workspace-remove-all-folders)
   :config
   (setq lsp-diagnostics-provider :flymake
         lsp-enable-indentation t
+        lsp-lens-enable nil
         lsp-eldoc-hook nil
         lsp-enable-snippet nil
+        lsp-modeline-code-actions-enable nil
         lsp-enable-symbol-highlighting nil
         lsp-modeline-diagnostics-enable nil
         lsp-signature-auto-activate nil
-        lsp-signature-render-documentation nil)
-  (diminish 'lsp-lens-mode))
+        lsp-signature-render-documentation nil))
 
 (use-package ivy
   :demand
