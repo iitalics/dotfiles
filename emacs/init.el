@@ -152,17 +152,26 @@
 ;;   :mode ("\\.l?agda\\'" . agda2-mode)
 ;;   )
 
+(defun tali-js-jsx-mode-hook ()
+  (interactive)
+  (setq-local company-dabbrev-code-modes '(js-mode js-jsx-mode))
+  (setq-local company-dabbrev-code-other-buffers 'code))
+
+;; (defun tali-json-mode ()
+;;   (interactive)
+;;   (javascript-mode)
+;;   (setq-local js-indent-level 2))
+
 (use-package js
   :straight nil
-  :mode ("\\.js[mx]?\\'" . javascript-mode)
-  :mode ("\\.ts\\'" . javascript-mode)
-  :mode ("\\.json\\'" . tali-json-mode)
-  :config (setq js-indent-level 4))
-
-(defun tali-json-mode ()
-  (interactive)
-  (javascript-mode)
-  (setq-local js-indent-level 2))
+  :mode ("\\.[m]?js\\'" . js-mode)
+  :mode ("\\.ts\\'" . js-mode)
+  :mode ("\\.json\\'" . js-mode)
+  :mode ("\\.[tm]sx\\'" . js-jsx-mode)
+  :config
+  (setq js-indent-level 4)
+  (add-hook 'js-mode-hook #'tali-js-jsx-mode-hook)
+  (add-hook 'js-jsx-mode-hook #'tali-js-jsx-mode-hook))
 
 (use-package rustic
   :mode ("\\.rs\\'" . rustic-mode))
