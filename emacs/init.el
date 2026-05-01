@@ -185,6 +185,7 @@
   :bind (:map racket-mode-map ("C-c C-r" . racket-run))
   :bind (:map racket-repl-mode-map ("C-c M-o" . racket-repl-clear-leaving-last-prompt))
   :hook (racket-mode . rainbow-delimiters-mode)
+  ;:hook (racket-mode . racket-xp-mode)
   :config (load "rhombus"))
 
 (use-package glsl-mode
@@ -226,3 +227,15 @@
 
 (use-package julia-mode
   :mode ("\\.jl\\'" . julia-mode))
+
+(use-package lua-mode
+  :mode ("\\.lua\\'" . lua-mode))
+
+(defun tali-default-c-mode ()
+  (interactive)
+  (c-set-style "java")
+  (c-set-offset 'label 0)
+  (c-set-offset 'arglist-intro '+)
+  (c-set-offset 'arglist-close 0))
+
+(add-hook 'c-mode-hook #'tali-default-c-mode)
