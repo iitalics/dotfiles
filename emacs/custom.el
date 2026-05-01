@@ -25,6 +25,7 @@
  '(rustic-cargo-check-arguments "--all-features")
  '(rustic-default-test-arguments "--tests --all-features")
  '(shell-file-name "/bin/bash")
+ '(tali-theme-flavor 'dark)
  '(tuareg-match-clause-indent 0)
  '(vc-follow-symlinks t)
  '(version-control t))
@@ -34,7 +35,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "#1D252C" :foreground "#A0B3C5" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 120 :width normal :foundry "CTDB" :family "Fira Code"))))
+ '(default ((t (:inherit nil :extend nil :weight regular :height 120 :width normal :foundry "CTDB" :family "Fira Code"))))
  '(ivy-minibuffer-match-face-2 ((t (:weight normal))))
  '(ivy-minibuffer-match-face-3 ((t (:weight normal))))
  '(ivy-minibuffer-match-face-4 ((t (:weight normal))))
