@@ -17,9 +17,10 @@
 (load "~/.emacs.d/custom.el")
 
 (use-package doom-themes)
-(tali-set-themes 'doom-pine
+(tali-set-themes 'doom-badger
                  ;;---
-                 'doom-homage-white)
+                 'doom-homage-white
+                 )
 
 (set-fontset-font t 'symbol (font-spec :family "Segoe UI Emoji") nil 'prepend)
 
