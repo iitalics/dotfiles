@@ -50,4 +50,13 @@
                      :weight wgt)))
      `(default ((t ,face))))))
 
+;; misc. functions
+;; ==
+
+(defun tali-insert-uuid ()
+  "Inserts a freshly generated UUID at the point."
+  (interactive)
+  (let ((l (process-lines "uuidgen")))
+    (if l (insert (car l)))))
+
 (provide 'tali-utils)
